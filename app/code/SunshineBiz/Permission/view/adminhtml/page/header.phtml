@@ -1,0 +1,45 @@
+<div class="header-top">
+    <a href="<?php echo $this->getHomeLink() ?>"><h2 class="logo"><?php echo $this->__('Backend Admin') ?></h2></a>
+    <div class="header-right">
+        <p class="super">
+            <?php echo $this->__('Locale: %s', $this->getLanguageSelect()) ?><span class="separator">|<?php echo $this->__("Logged in as %s", $this->escapeHtml($this->getUser()->getUsername())) ?><span class="separator">|</span><?php echo $this->formatDate(null, 'full') ?><span class="separator">|</span><a href="<?php echo $this->getLogoutLink() ?>" class="link-logout"><?php echo $this->__('Log Out') ?></a>
+        </p>
+        <?php if ( Mage::getSingleton('Mage_Core_Model_Authorization')->isAllowed('Mage_Adminhtml::global_search') ): ?>
+        <fieldset>
+            <legend>Search</legend>
+            <span id="global_search_indicator" class="autocomplete-indicator" style="display: none">
+                <img src="<?php echo $this->getSkinUrl('images/ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading...') ?>" class="v-middle"/>
+            </span>
+            <?php $defSearch = $this->__('Global Record Search') ?>
+            <input id="global_search" name="query" type="text" class="input-text" value="<?php if(!empty($query)): ?><?php echo $query ?><?php else: ?><?php echo $defSearch ?><?php endif ?>" onfocus="if(this.value=='<?php echo $defSearch ?>')this.value=''; " onblur="if(this.value=='')this.value='<?php echo $defSearch ?>';" />
+            <div id="global_search_autocomplete" class="autocomplete"></div>
+            <script type="text/javascript">
+                new Ajax.Autocompleter(
+                    'global_search',
+                    'global_search_autocomplete',
+                    '<?php echo $this->getUrl('adminhtml/index/globalSearch') ?>',
+                    {
+                        paramName:"query",
+                        minChars:2,
+                        indicator:"global_search_indicator",
+                        updateElement:getSelectionId,
+                        evalJSON:'force'
+                    }
+                );
+                function getSelectionId(li) {
+                    location.href = li.getAttribute('url');
+                }
+            </script>
+        </fieldset>
+        <?php endif; ?>
+    </div>
+</div>
+<script type="text/javascript">
+    function setInterfaceLanguage(evt){
+        var elem = Event.element(evt);
+        if(elem){
+            setLocation('<?php echo $this->getChangeLocaleUrl() ?>locale/'+elem.value+'/<?php echo $this->getRefererParamName() ?>/<?php echo $this->getUrlForReferer() ?>');
+        }
+    }
+    Event.observe('interface_locale', 'change', setInterfaceLanguage)
+</script>

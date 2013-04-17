@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<layout>
+	<adminhtml_user_edit>
+        <reference name="adminhtml.user.edit.tabs">
+            <block type="SunshineBiz_Permission_Block_User_Edit_Tab_Resources" name="adminhtml.user.edit.tab.resources"/>
+            <action method="addTabAfter">
+                <id>permission_resources_section</id>
+                <block>adminhtml.user.edit.tab.resources</block>
+                <after>roles_section</after>
+            </action>
+        </reference>
+    </adminhtml_user_edit>
+    
+    <adminhtml_auth_login>
+    	 <reference name="content">
+    	 	<action method="setTemplate"><template>SunshineBiz_Permission::admin/login.phtml</template></action>
+    	 </reference>
+    	 <reference name="adminhtml_auth_login_buttons">
+    	 	<action method="setTemplate"><template>SunshineBiz_Permission::admin/login_buttons.phtml</template></action>
+    	 </reference>
+    	 <reference name="adminhtml_auth_login_forgotpassword">
+    	 	<action method="setTemplate"><template>SunshineBiz_Permission::admin/forgotpassword_url.phtml</template></action>
+    	 </reference>
+    </adminhtml_auth_login>
+    
+    <adminhtml_auth_forgotpassword>
+    	<reference name="content">
+    	 	<action method="setTemplate"><template>SunshineBiz_Permission::admin/forgotpassword.phtml</template></action>
+    	 </reference>
+    </adminhtml_auth_forgotpassword>
+    
+    <default>
+	    <reference name="head">
+	    	<action method="setTemplate"><template>SunshineBiz_Permission::page/head.phtml</template></action>
+	    	<action method="setTitle" translate="title"><title>Backend Admin</title></action>
+	    </reference>
+	    <reference name="menu">
+	    	<action method="setTemplate"><template>SunshineBiz_Permission::menu.phtml</template></action>
+	    </reference>
+	    <reference name="footer">
+	    	<action method="setTemplate"><template>SunshineBiz_Permission::page/footer.phtml</template></action>
+	    </reference>
+    </default>    
+</layout>

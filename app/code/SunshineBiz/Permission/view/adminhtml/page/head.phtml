@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>"/>
+<title><?php echo htmlspecialchars(html_entity_decode($this->getTitle())) ?></title>
+<!--
+<link rel="icon" href="<?php echo $this->getSkinUrl('Mage_Page::favicon.ico') ?>" type="image/x-icon"/>
+<link rel="shortcut icon" href="<?php echo $this->getSkinUrl('Mage_Page::favicon.ico') ?>" type="image/x-icon"/>
+-->
+<script type="text/javascript">
+    var BLANK_URL = '<?php echo $this->getSkinUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->getSkinUrl('spacer.gif') ?>';
+    var BASE_URL = '<?php echo $this->getUrl('*') ?>';
+    var FORM_KEY = '<?php echo $this->getFormKey() ?>';
+</script>
+
+<?php echo $this->getCssJsHtml() ?>
+
+<?php if($this->getCanLoadExtJs()): ?>
+<script type="text/javascript">
+    Ext.BLANK_IMAGE_URL = BLANK_IMG;
+    Ext.UpdateManager.defaults.loadScripts = false;
+    Ext.UpdateManager.defaults.disableCaching = true;
+</script>
+<?php endif; ?>
+
+<?php if($this->getCanLoadTinyMce()): // TinyMCE is broken when loaded through index.php ?>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('tiny_mce/tiny_mce.js') ?>"></script>
+<?php endif; ?>
+
+<script type="text/javascript">
+    Fieldset.addToPrefix(<?php echo Mage::helper('Mage_Adminhtml_Helper_Data')->getCurrentUserId() ?>);
+</script>
+
+<?php echo $this->helper('Mage_Core_Helper_Js')->getTranslatorScript() ?>
+<?php echo $this->getChildHtml('calendar'); ?>
+<?php echo $this->getChildHtml('optional_zip_countries'); ?>
