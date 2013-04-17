@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_searchtag_index>
+        <reference name="content">
+            <block type="SunshineBiz_LBS_Block_SearchTag" name="adminhtml.searchTag.index"/>
+        </reference>
+    </adminhtml_searchtag_index>
+    
+    <adminhtml_searchtag_edit>
+        <reference name="content">
+            <block type="SunshineBiz_LBS_Block_SearchTag_Edit" name="adminhtml.searchTag.edit" />
+        </reference>
+        <reference name="js">
+            <block type="Mage_Core_Block_Template" template="SunshineBiz_Locale::locale.phtml" name="locale.locale.js" />
+        </reference>
+    </adminhtml_searchtag_edit>
+</layout>

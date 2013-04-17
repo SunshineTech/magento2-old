@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <add id="SunshineBiz_LBS::system_lbs" title="LBS" module="SunshineBiz_LBS" sortOrder="80" parent="Mage_Adminhtml::system" resource="SunshineBiz_LBS::lbs"/>
+        <add id="SunshineBiz_LBS::system_lbs_searchTags" title="SearchTags" module="SunshineBiz_LBS" parent="SunshineBiz_LBS::system_lbs" action="adminhtml/searchTag" resource="SunshineBiz_LBS::lbs_searchTags"/>
+    </menu>
+</config>

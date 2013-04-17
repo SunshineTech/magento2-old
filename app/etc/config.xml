@@ -219,7 +219,7 @@
         </system>
         <general>
             <locale>
-                <code>en_US</code>
+                <code>zh_CN</code>
                 <timezone>America/Los_Angeles</timezone>
             </locale>
         </general>

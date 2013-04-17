@@ -1,0 +1,16 @@
+<script type="text/javascript">
+//<![CDATA[
+    function localeChanged(element, url, locales) {
+        
+        if (element.value !== '') {
+            locales = eval(locales);
+            for ( var i=0 ; i < locales.length ; ++i ) {
+                if(locales[i] === element.value)
+                    return;
+            }
+        
+            location.href = url + 'locale/' + element.value + '/';
+        }        
+    }
+//]]>
+</script>

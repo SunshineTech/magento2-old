@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SunshineBiz_Locale>
+            <version>0.1.0.0.0</version>
+            <active>true</active>
+        </SunshineBiz_Locale>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <SunshineBiz_Locale>SunshineBiz_Locale_Adminhtml</SunshineBiz_Locale>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+    	<translate>
+            <modules>
+                <SunshineBiz_Locale>
+                    <files>
+                        <default>SunshineBiz_Locale.csv</default>
+                    </files>
+                </SunshineBiz_Locale>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>
