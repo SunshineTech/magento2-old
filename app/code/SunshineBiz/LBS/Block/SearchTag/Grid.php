@@ -89,7 +89,7 @@ class SunshineBiz_LBS_Block_SearchTag_Grid extends SunshineBiz_LBS_Block_Widget_
 
     protected function _prepareMassaction() {
 
-        $this->setMassactionIdFilter('id');
+        $this->setMassactionIdField('id');
         $this->getMassactionBlock()->setFormFieldName('searchTag');
 
         $this->getMassactionBlock()->addItem('massChangeStatus', array(

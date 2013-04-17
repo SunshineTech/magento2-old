@@ -10,8 +10,7 @@
  */
 class SunshineBiz_LBS_Block_SearchTag extends SunshineBiz_LBS_Block_Widget_Grid_Container {
 
-    public function _construct() {
-        
+    public function _construct() {        
         $this->_controller = 'searchTag';
         $this->_headerText = Mage::helper('SunshineBiz_LBS_Helper_Data')->__('SearchTags');
         $this->_addButtonLabel = Mage::helper('SunshineBiz_LBS_Helper_Data')->__('Add New SearchTag');

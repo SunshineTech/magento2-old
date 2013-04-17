@@ -13,38 +13,38 @@
  * 数据来源：（百度地图tag引导体系）http://developer.baidu.com/map/devRes.htm
  */
 $tags = array(
-    array('美食', 'lbs/searchTags/ico_food.png', 10, 10, array(
-        array('中餐馆', '', 0, 0, array(array('鲁菜', '', 0, 0), array('川菜', '', 0, 0), array('粤菜', '', 0, 0), array('徽菜', '', 0, 0), array('台湾菜', '', 0, 0), array('贵州菜', '', 0, 0), array('江浙菜', '', 0, 0), array('湘菜', '', 0, 0), array('湖北菜', '', 0, 0), array('清真菜', '', 0, 0), array('云南菜', '', 0, 0), array('东北菜', '', 0, 0), array('北京菜', '', 0, 0), array('闽南菜', '', 0, 0), array('西北菜', '', 0, 0), array('素菜', '', 0, 0), array('火锅', 'lbs/searchTags/ico_chafingDish.png', 0, 0), array('烤鸭', '', 0, 0), array('海鲜', '', 0, 0), array('家常菜', '', 0, 0))),
+    array('美食', 'lbs/searchTags/icon_food.png', 10, 10, array(
+        array('中餐馆', '', 0, 0, array(array('鲁菜', '', 0, 0), array('川菜', '', 0, 0), array('粤菜', '', 0, 0), array('徽菜', '', 0, 0), array('台湾菜', '', 0, 0), array('贵州菜', '', 0, 0), array('江浙菜', '', 0, 0), array('湘菜', '', 0, 0), array('湖北菜', '', 0, 0), array('清真菜', '', 0, 0), array('云南菜', '', 0, 0), array('东北菜', '', 0, 0), array('北京菜', '', 0, 0), array('闽南菜', '', 0, 0), array('西北菜', '', 0, 0), array('素菜', '', 0, 0), array('火锅', 'lbs/searchTags/icon_chafingDish.png', 0, 0), array('烤鸭', '', 0, 0), array('海鲜', '', 0, 0), array('家常菜', '', 0, 0))),
         array('西餐厅', '', 0, 0, array(array('意大利菜', '', 0, 0), array('法国菜', '', 0, 0), array('德国菜', '', 0, 0), array('俄罗斯菜', '', 0, 0), array('拉美烧烤', '', 0, 0), array('中东料理', '', 0, 0), array('披萨', '', 0, 0), array('牛排', '', 0, 0))),
         array('日本菜', '', 0, 0, array(array('日本料理', '', 0, 0), array('日式烧烤', '', 0, 0), array('寿司', '', 0, 0))),
         array('韩国菜', '', 0, 0),
         array('东南亚菜', '', 0, 0, array(array('泰国菜', '', 0, 0), array('越南菜', '', 0, 0), array('印度菜', '', 0, 0), array('菲律宾菜', '', 0, 0), array('印尼风味', '', 0, 0))),
-        array('外卖', 'lbs/searchTags/ico_takeaway.png', 0, 20),
+        array('外卖', 'lbs/searchTags/icon_takeaway.png', 0, 20),
         array('自助餐', '', 0, 0),
-        array('快餐', 'lbs/searchTags/ico_fastFood.png', 20, 30, array(array('中式快餐', '', 0, 0), array('西式快餐', '', 0, 0))),
+        array('快餐', 'lbs/searchTags/icon_fastFood.png', 20, 30, array(array('中式快餐', '', 0, 0), array('西式快餐', '', 0, 0))),
         array('小吃', '', 30, 40, array(array('粉面馆', '', 0, 0), array('粥店', '', 0, 0), array('饺子馆', '', 0, 0), array('馄饨店', '', 0, 0), array('麻辣烫', '', 0, 0), array('关东煮', '', 0, 0), array('熟食', '', 0, 0), array('零食', '', 0, 0), array('包子', '', 0, 0))),
         array('蛋糕甜点', '', 0, 0, array(array('蛋糕西点', '', 0, 0), array('冰淇淋', '', 0, 0), array('甜点饮品', '', 0, 0))),
         array('烧烤', '', 0, 0)
     )),
-    array('交通', 'lbs/searchTags/ico_traffic.png', 0, 0, array(
-        array('地铁站', 'lbs/searchTags/ico_subway.png', 40, 50),
-        array('公交站', 'lbs/searchTags/ico_bus.png', 50, 60),
-        array('出租车', 'lbs/searchTags/ico_taxi.png', 60, 70),
+    array('交通', 'lbs/searchTags/icon_traffic.png', 0, 0, array(
+        array('地铁站', 'lbs/searchTags/icon_subway.png', 40, 50),
+        array('公交站', 'lbs/searchTags/icon_bus.png', 50, 60),
+        array('出租车', 'lbs/searchTags/icon_taxi.png', 60, 70),
         array('顺风车', '', 70, 80),
         array('飞机场', '', 0, 0),
         array('机场出入口', '', 0, 0),
-        array('火车站', '', 0, 0),
+        array('火车站', 'lbs/searchTags/icon_train.png', 0, 0),
         array('长途汽车站', '', 0, 0),
         array('机场巴士', '', 0, 0),
         array('港口', '', 0, 0),
         array('高速公路服务区', '', 0, 0),
         array('收费站', '', 0, 0),
         array('停车场', 'lbs/searchTags/icon_parking.png', 0, 0),
-        array('加油站', 'lbs/searchTags/ico_gasStat.png', 0, 0),
+        array('加油站', 'lbs/searchTags/icon_gasStat.png', 0, 0),
         array('红绿灯', '', 0, 0)
     )),
     array('生活服务', '', 0, 0, array(
-        array('邮局', 'lbs/searchTags/ico_postOffice.png', 0, 90),
+        array('邮局', 'lbs/searchTags/icon_postOffice.png', 0, 90),
         array('通讯营业厅', '', 0, 0, array(array('电信营业厅', '', 0, 0), array('移动营业厅', '', 0, 0), array('联通营业厅', '', 0, 0), array('铁通营业厅', '', 0, 0), array('网通营业厅', '', 0, 0))),
         array('火车票/机票/汽车票售票点', '', 80, 100, array(array('火车票售票点', '', 0, 0), array('飞机票售票点', '', 0, 0), array('汽车票售票点', '', 0, 0))),
         array('裁缝店/洗衣店', '', 0, 0, array(array('裁缝店', '', 0, 0), array('洗衣店', '', 0, 0))),
@@ -61,10 +61,10 @@ $tags = array(
         array('公交卡充值点', '', 0, 0),
         array('快递公司', '', 0, 0),
         array('旅行社', '', 0, 0, array(array('国际旅行社', '', 0, 0))),
-        array('公共厕所', 'lbs/searchTags/ico_toilet.png', 100, 110),
+        array('公共厕所', 'lbs/searchTags/icon_toilet.png', 100, 110),
         array('墓地陵园', '', 0, 0)
     )),
-    array('购物', 'lbs/searchTags/ico_shopping.png', 110, 120, array(
+    array('购物', 'lbs/searchTags/icon_shopping.png', 110, 120, array(
         array('购物中心', '', 0, 0),
         array('超市/便利店', 'lbs/searchTags/icon_shopping.png', 0, 0), 
         array('家电', '', 0, 0, array(array('空调', '', 0, 0), array('冰箱', '', 0, 0), array('洗衣机', '', 0, 0), array('微波炉', '', 0, 0))), 
@@ -89,14 +89,14 @@ $tags = array(
         array('乐器行', '', 0, 0, array(array('琴行', '', 0, 0))),
         array('集市/批发市场', '', 0, 0, array(array('农贸市场', '', 0, 0), array('服装批发市场', '', 0, 0), array('轻纺市场', '', 0, 0), array('药材批发市场', '', 0, 0), array('文具批发市场', '', 0, 0), array('小商品市场', '', 0, 0), array('花鸟市场', '', 0, 0), array('二手市场', '', 0, 0)))
     )),
-    array('丽人', 'lbs/searchTags/ico_beauty.png', 0, 0, array(
+    array('丽人', 'lbs/searchTags/icon_beauty.png', 0, 0, array(
         array('美容', '', 0, 0, array(array('SPA', '', 0, 0), array('面部护理', '', 0, 0))),
         array('美发', '', 0, 0, array(array('洗染烫', '', 0, 0))),
         array('瘦身纤体', '', 0, 0),
         array('美甲', '', 0, 0)
     )),
     array('金融', '', 0, 0, array(
-        array('银行', 'lbs/searchTags/ico_bank.png', 120, 130, array(array('ATM', 'lbs/searchTags/ico_atm.png', 130, 140))),
+        array('银行', 'lbs/searchTags/icon_bank.png', 120, 130, array(array('ATM', 'lbs/searchTags/icon_atm.png', 130, 140))),
         array('典当行', '', 0, 0),
         array('信用社', '', 0, 0, array(array('农村信用社', '', 0, 0), array('城市信用社', '', 0, 0))),
         array('保险公司', '', 0, 0),
@@ -109,16 +109,16 @@ $tags = array(
     array('休闲娱乐', '', 140, 150, array(
         array('度假村/农家院/采摘园', '', 0, 0, array(array('农家院', '', 0, 0), array('度假村', '', 0, 0), array('采摘园', '', 0, 0))),
         array('文化宫', '', 0, 0),
-        array('电影院', 'lbs/searchTags/ico_cinema.png', 0, 0),
+        array('电影院', 'lbs/searchTags/icon_cinema.png', 0, 0),
         array('音乐厅', '', 0, 0),
         array('剧院', '', 0, 0),
         array('KTV', 'lbs/searchTags/icon_ktv.png', 0, 0),
         array('夜总会/歌舞厅/娱乐城/迪厅', '', 0, 0, array(array('夜总会', '', 0, 0), array('歌舞厅', '', 0, 0), array('娱乐城', '', 0, 0), array('迪厅', '', 0, 0))),
         array('商务会馆', '', 0, 0),
-        array('洗浴/按摩/足浴/温泉', '', 0, 0, array(array('洗浴', 'lbs/searchTags/ico_bath.png', 0, 0), array('桑拿', 'lbs/searchTags/icon_sauna.png', 0, 0), array('温泉', '', 0, 0), array('按摩', 'lbs/searchTags/icon_massage.png', 0, 0), array('足浴', 'lbs/searchTags/icon_footbath.png', 0, 0))),
+        array('洗浴/按摩/足浴/温泉', '', 0, 0, array(array('洗浴', 'lbs/searchTags/icon_bath.png', 0, 0), array('桑拿', 'lbs/searchTags/icon_sauna.png', 0, 0), array('温泉', '', 0, 0), array('按摩', 'lbs/searchTags/icon_massage.png', 0, 0), array('足浴', 'lbs/searchTags/icon_footbath.png', 0, 0))),
         array('网吧', 'lbs/searchTags/icon_internetCafes.png', 0, 0),
         array('游戏', '', 0, 0, array(array('电玩', '', 0, 0), array('棋牌室', '', 0, 0), array('桌游', '', 0, 0), array('真人CS', '', 0, 0))),
-        array('酒吧/茶座/咖啡厅', '', 0, 0, array(array('酒吧', 'lbs/searchTags/ico_bar.png', 0, 0), array('茶座', '', 0, 0), array('咖啡厅', 'lbs/searchTags/ico_coffee.png', 0, 0))),
+        array('酒吧/茶座/咖啡厅', '', 0, 0, array(array('酒吧', 'lbs/searchTags/icon_bar.png', 0, 0), array('茶座', '', 0, 0), array('咖啡厅', 'lbs/searchTags/icon_coffee.png', 0, 0))),
         array('DIY手工', '', 0, 0, array(array('DIY蛋糕', '', 0, 0), array('DIY饰品', '', 0, 0)))
     )),
     array('运动健身', '', 150, 160, array(
@@ -144,13 +144,13 @@ $tags = array(
         array('药店', 'lbs/searchTags/icon_drugStore.png', 0, 0),
         array('整形医院', '', 0, 0)
     )),
-    array('酒店', 'lbs/searchTags/ico_hotel.png', 160, 0, array(
-        array('星级酒店', 'lbs/searchTags/ico_starHotel.png', 0, 0, array(array('五星级酒店', '', 0, 0), array('四星级酒店', '', 0, 0), array('三星级酒店', '', 0, 0))),
-        array('快捷酒店', 'lbs/searchTags/ico_inn.png', 0, 0),
+    array('酒店', 'lbs/searchTags/icon_hotel.png', 160, 0, array(
+        array('星级酒店', 'lbs/searchTags/icon_starHotel.png', 0, 0, array(array('五星级酒店', '', 0, 0), array('四星级酒店', '', 0, 0), array('三星级酒店', '', 0, 0))),
+        array('快捷酒店', 'lbs/searchTags/icon_inn.png', 0, 0),
         array('公寓式酒店', '', 0, 0),
         array('宾馆', '', 0, 0, array(array('家庭旅馆', '', 0, 0), array('青年旅舍', '', 0, 0), array('招待所', '', 0, 0)))
     )),
-    array('旅游景点', 'lbs/searchTags/ico_view.png', 170, 180, array(
+    array('旅游景点', 'lbs/searchTags/icon_view.png', 170, 180, array(
         array('公园', '', 0, 0, array(array('动物园', '', 0, 0), array('植物园', '', 0, 0), array('国家公园', '', 0, 0))),
         array('游乐园', '', 0, 0),
         array('海底世界', '', 0, 0),
@@ -180,7 +180,7 @@ $tags = array(
         array('婚介', '', 0, 0)
     )),
     array('教育', '', 0, 0, array(
-        array('学校', 'lbs/searchTags/ico_school.png', 0, 0, array(array('幼儿园', '', 0, 0), array('小学', '', 0, 0), array('初中', '', 0, 0), array('高中', '', 0, 0), array('中专', '', 0, 0), array('大学', '', 0, 0), array('特殊教育学校', '', 0, 0))),
+        array('学校', 'lbs/searchTags/icon_school.png', 0, 0, array(array('幼儿园', '', 0, 0), array('小学', '', 0, 0), array('初中', '', 0, 0), array('高中', '', 0, 0), array('中专', '', 0, 0), array('大学', '', 0, 0), array('特殊教育学校', '', 0, 0))),
         array('科研机构', '', 0, 0),
         array('图书馆', '', 0, 0),
         array('留学中介', '', 0, 0),
