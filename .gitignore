@@ -33,3 +33,4 @@ atlassian*
 !/pub/static/.htaccess
 /var/*
 *swp
+!/pub/media/lbs/
