@@ -16,7 +16,7 @@ class SunshineBiz_Location_Adminhtml_JsonController extends Mage_Adminhtml_JsonC
         $arrRegions = Mage::getResourceModel('SunshineBiz_Location_Model_Resource_Area_Collection')
                 ->addRegionFilter($regionId)
                 ->load()
-                ->toOptionArray(Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --'));
+                ->toOptionArray();
 
         if (!empty($arrRegions)) {
             foreach ($arrRegions as $region) {

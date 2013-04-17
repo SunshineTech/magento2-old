@@ -119,8 +119,7 @@ class SunshineBiz_Location_Block_Region_Edit_Form extends SunshineBiz_Location_B
             'title' => $this->_helper->__('Country'),
             'class' => 'input-select',
             'required' => true,
-        ))->setValues(Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')
-                        ->load()->toOptionArray(false));
+        ))->setValues(Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')->load()->toOptionArray());
 
         $form->setValues($model->getData());
         $form->setUseContainer(true);

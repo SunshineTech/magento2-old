@@ -116,13 +116,8 @@ class SunshineBiz_Location_Block_Area_Edit_Form extends SunshineBiz_Location_Blo
             'title' => $this->_helper->__('Country'),
             'class' => 'input-select',
             'onchange' => 'locationChanged(this, \'' . $this->getUrl('*/json/countryRegion') . '\',  \'area_region_id\')'
-        ))->setValues(Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')
-                        ->load()->toOptionArray(Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --')));
+        ))->setValues(Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')->load()->toOptionArray());
 
-        $options = Mage::getResourceModel('SunshineBiz_Location_Model_Resource_Region_Collection')
-                ->addCountryFilter($model->getCountryId())
-                ->load()
-                ->toOptionArray(Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --'));
         $fieldset->addField('region_id', 'select', array(
             'name' => 'region_id',
             'label' => $this->_helper->__('Regions'),
@@ -131,17 +126,16 @@ class SunshineBiz_Location_Block_Area_Edit_Form extends SunshineBiz_Location_Blo
             'class' => 'input-select',
             'onchange' => 'locationChanged(this, \'' . $this->getUrl('*/json/regionArea') . '\',  \'area_parent_id\')',
             'required' => true,
-        ))->setValues($options);
+        ))->setValues(Mage::getModel('Mage_Directory_Model_Country')->setId($model->getCountryId())->getRegions()->toOptionArray());
 
         $options = array();
         if ($model->getRegionId()) {
             $options = Mage::getModel('SunshineBiz_Location_Model_Region')
                     ->setId($model->getRegionId())
                     ->getAreas()
-                    ->toOptionArray();
-        } else {
-            array_unshift($options, array('value' => '0', 'label' => ''));
+                    ->toOptionArray(false);
         }
+        array_unshift($options, array('value' => '0', 'label' => Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --')));
         $fieldset->addField('parent_id', 'select', array(
             'name' => 'parent_id',
             'label' => $this->_helper->__('Parent'),

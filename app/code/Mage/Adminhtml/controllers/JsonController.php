@@ -44,10 +44,10 @@ class Mage_Adminhtml_JsonController extends Mage_Adminhtml_Controller_Action
 
         $countryId = $this->getRequest()->getParam('parent');
         if (!empty($countryId)) {
-            $arrRegions = Mage::getResourceModel('SunshineBiz_Location_Model_Resource_Region_Collection')
+            $arrRegions = Mage::getResourceModel('Mage_Directory_Model_Resource_Region_Collection')
                 ->addCountryFilter($countryId)
                 ->load()
-                ->toOptionArray(Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --'));
+                ->toOptionArray();
 
             if (!empty($arrRegions)) {
                 foreach ($arrRegions as $region) {

@@ -13,10 +13,7 @@ class SunshineBiz_Location_Block_Widget_Grid_Column_Filter_Region extends Mage_B
         $options = array();
         $value = $this->getData('value');
         if (isset($value['country'])) {
-            $options = Mage::getResourceModel('SunshineBiz_Location_Model_Resource_Region_Collection')
-                ->addCountryFilter($value['country'])
-                ->load()
-                ->toOptionArray(Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --'));
+            $options =Mage::getModel('Mage_Directory_Model_Country')->setId($value['country'])->getRegions()->toOptionArray();
         }
 
         return $options;

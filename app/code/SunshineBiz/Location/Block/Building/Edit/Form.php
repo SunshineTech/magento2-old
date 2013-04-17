@@ -114,13 +114,8 @@ class SunshineBiz_Location_Block_Building_Edit_Form extends SunshineBiz_Location
             'title' => $this->_helper->__('Country'),
             'class' => 'input-select',
             'onchange' => 'locationChanged(this, \'' . $this->getUrl('*/json/countryRegion') . '\',  \'building_region_id\')'
-        ))->setValues(Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')
-                        ->load()->toOptionArray());
+        ))->setValues(Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')->load()->toOptionArray());
 
-        $options = Mage::getModel('Mage_Directory_Model_Country')
-                ->setId($model->getCountryId())
-                ->getRegions()
-                ->toOptionArray();
         $fieldset->addField('region_id', 'select', array(
             'name' => 'region_id',
             'label' => $this->_helper->__('Regions'),
@@ -128,7 +123,7 @@ class SunshineBiz_Location_Block_Building_Edit_Form extends SunshineBiz_Location
             'title' => $this->_helper->__('Regions'),
             'class' => 'input-select',
             'onchange' => 'locationChanged(this, \'' . $this->getUrl('*/json/regionArea') . '\',  \'building_area_id\')',
-        ))->setValues($options);
+        ))->setValues(Mage::getModel('Mage_Directory_Model_Country')->setId($model->getCountryId())->getRegions()->toOptionArray());
 
         $options = array();
         if ($model->getRegionId()) {
@@ -136,8 +131,6 @@ class SunshineBiz_Location_Block_Building_Edit_Form extends SunshineBiz_Location
                     ->setId($model->getRegionId())
                     ->getAreas()
                     ->toOptionArray();
-        } else {
-            array_unshift($options, array('value' => '0', 'label' => ''));
         }
         $fieldset->addField('area_id', 'select', array(
             'name' => 'area_id',

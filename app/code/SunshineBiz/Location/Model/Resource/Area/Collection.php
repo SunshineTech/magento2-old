@@ -37,7 +37,7 @@ class SunshineBiz_Location_Model_Resource_Area_Collection extends SunshineBiz_Lo
         return $this;
     }
 
-    public function toOptionArray($emptyLabel = ' ') {
+    public function toOptionArray($emptyLabel) {
 
         $areas = array();
         $region = null;
@@ -68,6 +68,8 @@ class SunshineBiz_Location_Model_Resource_Area_Collection extends SunshineBiz_Lo
         }
 
         if (count($this->_options) > 0 && $emptyLabel !== false) {
+            if(!$emptyLabel)
+                $emptyLabel = Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --');
             array_unshift($this->_options, array('value' => '', 'label' => $emptyLabel));
         }
 

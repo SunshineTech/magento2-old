@@ -30,7 +30,7 @@ class SunshineBiz_Location_Model_Resource_Region_Collection extends Mage_Directo
         return $this;
     }
 
-    public function toOptionArray($emptyLabel = ' ') {
+    public function toOptionArray($emptyLabel) {
 
         $options = array();
         foreach ($this as $region) {
@@ -40,6 +40,8 @@ class SunshineBiz_Location_Model_Resource_Region_Collection extends Mage_Directo
         }
 
         if (count($options) > 0 && $emptyLabel !== false) {
+            if(!$emptyLabel)
+                $emptyLabel = Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --');
             array_unshift($options, array('value' => '', 'label' => $emptyLabel));
         }
 

@@ -16,13 +16,8 @@ class SunshineBiz_Location_Block_Widget_Grid_Column_Filter_Area extends Mage_Bac
             $options = Mage::getModel('SunshineBiz_Location_Model_Region')
                     ->setId($value['region'])
                     ->getAreas()
-                    ->toOptionArray(false);
+                    ->toOptionArray();
         }
-
-        array_unshift($options, array(
-            'value' => '',
-            'label' => ''
-        ));
 
         return $options;
     }
@@ -30,7 +25,7 @@ class SunshineBiz_Location_Block_Widget_Grid_Column_Filter_Area extends Mage_Bac
     protected function _getCountryOptions() {
         $options = Mage::getResourceModel('Mage_Directory_Model_Resource_Country_Collection')
                 ->load()
-                ->toOptionArray(Mage::helper('Mage_Backend_Helper_Data')->__('All Countries'));
+                ->toOptionArray();
 
         return $options;
     }
@@ -42,13 +37,8 @@ class SunshineBiz_Location_Block_Widget_Grid_Column_Filter_Area extends Mage_Bac
             $options = Mage::getModel('Mage_Directory_Model_Country')
                     ->setId($value['country'])
                     ->getRegions()
-                    ->toOptionArray(false);
+                    ->toOptionArray();
         }
-
-        array_unshift($options, array(
-            'value' => '',
-            'label' => ''
-        ));
 
         return $options;
     }

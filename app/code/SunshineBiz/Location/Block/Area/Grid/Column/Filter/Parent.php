@@ -18,10 +18,9 @@ class SunshineBiz_Location_Block_Area_Grid_Column_Filter_Parent extends Mage_Bac
             $options = Mage::getModel('SunshineBiz_Location_Model_Region')
                     ->setId($value['region'])
                     ->getAreas()
-                    ->toOptionArray(Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --'));
+                    ->toOptionArray();
         }
 
         return $options;
     }
-
 }

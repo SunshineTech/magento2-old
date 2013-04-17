@@ -17,6 +17,12 @@
                 </setup>
             </location_setup>
         </resources>
+        <di>
+            <preferences>
+                <Mage_Directory_Model_Resource_Country_Collection>SunshineBiz_Location_Model_Resource_Country_Collection</Mage_Directory_Model_Resource_Country_Collection>
+                <Mage_Directory_Model_Resource_Region_Collection>SunshineBiz_Location_Model_Resource_Region_Collection</Mage_Directory_Model_Resource_Region_Collection>
+            </preferences>
+        </di>
     </global>
     <admin>
         <routers>
