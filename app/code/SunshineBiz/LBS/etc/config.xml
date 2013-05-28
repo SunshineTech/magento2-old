@@ -18,6 +18,17 @@
             </lbs_setup>
         </resources>
     </global>
+    <frontend>
+        <routers>
+            <lbs>
+                <use>standard</use>
+                <args>
+                    <module>SunshineBiz_LBS</module>
+                    <frontName>lbs</frontName>
+                </args>
+            </lbs>
+        </routers>
+    </frontend>
     <admin>
         <routers>
             <adminhtml>

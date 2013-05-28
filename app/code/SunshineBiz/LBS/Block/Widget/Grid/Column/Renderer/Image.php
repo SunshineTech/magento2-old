@@ -10,7 +10,7 @@ class SunshineBiz_LBS_Block_Widget_Grid_Column_Renderer_Image extends Mage_Backe
 
     public function render(Varien_Object $row) {
         
-        if ($url = $row->getData($this->getColumn()->getIndex())) {            
+        if ($url = $row->getData($this->getColumn()->getIndex())) {
             if( !preg_match("/^http\:\/\/|https\:\/\//", $url) ) {
                 $url = Mage::getBaseUrl('media') . $url;
             }
