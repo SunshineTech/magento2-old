@@ -211,12 +211,14 @@
                 </input_types>
             </validator_data>
         </general>
+        <!--为了不让系统链接到magento网站，故注释掉 2013-06-01 iSunshineTech <isunshinetech@gmail.com>
         <hints>
             <store_switcher>
                 <url><![CDATA[http://www.magentocommerce.com/knowledge-base/entry/understanding-store-scopes]]></url>
                 <enabled>1</enabled>
             </store_switcher>
         </hints>
+        -->
     </default>
     <stores>
         <admin>

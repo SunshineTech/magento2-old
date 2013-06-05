@@ -30,7 +30,13 @@ class SunshineBiz_Location_Model_Resource_Region_Collection extends Mage_Directo
         return $this;
     }
 
-    public function toOptionArray($emptyLabel) {
+    /**
+     * Convert collection items to select options array
+     *
+     * @param string $emptyLabel
+     * @return array
+     */
+    public function toOptionArray($emptyLabel = '') {
 
         $options = array();
         foreach ($this as $region) {
@@ -38,10 +44,11 @@ class SunshineBiz_Location_Model_Resource_Region_Collection extends Mage_Directo
             $data['label'] = $region->getName();
             $options[] = $data;
         }
-
+        
         if (count($options) > 0 && $emptyLabel !== false) {
             if(!$emptyLabel)
                 $emptyLabel = Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --');
+            
             array_unshift($options, array('value' => '', 'label' => $emptyLabel));
         }
 

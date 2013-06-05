@@ -195,7 +195,7 @@ class Mage_Backend_Block_Widget_Grid_Extended
         $this->setChild('export_button',
             $this->getLayout()->createBlock('Mage_Backend_Block_Widget_Button')
                 ->setData(array(
-                'label'     => Mage::helper('Mage_Backend_Helper_Data')->__('Export'),
+                'label'     => Mage::helper('Mage_Adminhtml_Helper_Data')->__('Export'),
                 'onclick'   => $this->getJsObjectName().'.doExport()',
                 'class'   => 'task'
             ))

@@ -56,7 +56,7 @@ class Mage_Adminhtml_CustomerController extends Mage_Adminhtml_Controller_Action
      */
     public function indexAction()
     {
-        $this->_title($this->__('Customers'))->_title($this->__('Manage Customers'));
+        $this->_title(Mage::helper('Mage_Adminhtml_Helper_Data')->__('Customers'))->_title(Mage::helper('Mage_Adminhtml_Helper_Data')->__('Manage Customers'));
 
         if ($this->getRequest()->getQuery('ajax')) {
             $this->_forward('grid');

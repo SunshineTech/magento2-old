@@ -33,7 +33,7 @@
             <?php echo $this->getBlockHtml('formkey')?>
             <fieldset>
                 <span class="field-row">
-                    <label><?php echo $this->__('Actions') ?></label>
+                    <label><?php echo Mage::helper('Mage_Adminhtml_Helper_Data')->__('Actions') ?></label>
                     <select id="<?php echo $this->getHtmlId() ?>-select" class="required-entry select absolute-advice local-validation"<?php echo $this->getUiId('select') ?>>
                         <option value=""></option>
                         <?php foreach ($this->getItems() as $_item):?>

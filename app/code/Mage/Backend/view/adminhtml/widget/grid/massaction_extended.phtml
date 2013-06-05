@@ -36,7 +36,7 @@
                 <?php echo $this->getBlockHtml('formkey')?>
                 <fieldset>
                     <span class="field-row">
-                        <label><?php echo $this->__('Actions') ?></label>
+                        <label><?php echo Mage::helper('Mage_Adminhtml_Helper_Data')->__('Actions') ?></label>
                         <select id="<?php echo $this->getHtmlId() ?>-select" class="required-entry select absolute-advice local-validation">
                             <option value=""></option>
                             <?php foreach ($this->getItems() as $_item): ?>
@@ -64,7 +64,7 @@
     <ul>
         <?php if ($this->getUseSelectAll()):?>
         <li>
-            <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.selectAll()"><?php echo $this->__('Select All') ?></a>
+            <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.selectAll()"><?php echo Mage::helper('Mage_Widget_Helper_Data')->__('Select All') ?></a>
         </li>
         <li>
             <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.unselectAll()"><?php echo $this->__('Unselect All') ?></a>

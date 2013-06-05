@@ -10,7 +10,13 @@
  */
 class SunshineBiz_Location_Model_Resource_Country_Collection extends Mage_Directory_Model_Resource_Country_Collection {
     
-    public function toOptionArray($emptyLabel) {
+    /**
+     * Convert collection items to select options array
+     *
+     * @param string $emptyLabel
+     * @return array
+     */
+    public function toOptionArray($emptyLabel = '') {
         if($emptyLabel !== false && !$emptyLabel)
                 $emptyLabel = Mage::helper('Mage_Core_Helper_Data')->__('-- Please Select --');
         

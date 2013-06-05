@@ -30,7 +30,7 @@
         <add id="Mage_Catalog::catalog" title="Products" module="Mage_Catalog" sortOrder="20" dependsOnModule="Mage_Catalog" resource="Mage_Catalog::catalog"/>
         <add id="Mage_Catalog::catalog_products" title="Catalog" module="Mage_Catalog" sortOrder="10" parent="Mage_Catalog::inventory" action="adminhtml/catalog_product/" resource="Mage_Catalog::products"/>
         <add id="Mage_Catalog::catalog_categories" title="Categories" module="Mage_Catalog" sortOrder="20" parent="Mage_Catalog::inventory" action="adminhtml/catalog_category/" resource="Mage_Catalog::categories"/>
-        <add id="Mage_Catalog::catalog_attributes_attributes" title="Product" module="Mage_Catalog" sortOrder="30" parent="Mage_Adminhtml::stores_attributes" action="adminhtml/catalog_product_attribute/" resource="Mage_Catalog::attributes_attributes"/>
+        <add id="Mage_Catalog::catalog_attributes_attributes" title="Product Attribute" module="Mage_Catalog" sortOrder="30" parent="Mage_Adminhtml::stores_attributes" action="adminhtml/catalog_product_attribute/" resource="Mage_Catalog::attributes_attributes"/>
         <add id="Mage_Catalog::catalog_attributes_sets" title="Product Template" module="Mage_Catalog" sortOrder="40" parent="Mage_Adminhtml::stores_attributes" action="adminhtml/catalog_product_set/" resource="Mage_Catalog::sets"/>
         <add id="Mage_Catalog::catalog_urlrewrite" title="URL Redirects" module="Mage_Catalog" sortOrder="20" parent="Mage_Adminhtml::marketing_seo" action="adminhtml/urlrewrite/index" resource="Mage_Catalog::urlrewrite"/>
     </menu>

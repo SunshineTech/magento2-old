@@ -25,10 +25,10 @@
  */
 ?>
 <div class="page-actions">
-    <?php echo $this->getBackButtonHtml() ?>
-    <?php echo $this->getSaveButtonHtml() ?>
+    <?php echo $this->getChildHtml('back_button') ?>
+    <?php echo $this->getChildHtml('save_button') ?>
 </div>
-<?php echo $this->getFormHtml() ?>
+<?php echo $this->getChildHtml('setForm') ?>
 <script type="text/javascript">
     jQuery('#<?php echo $this->getFormId();?>').mage('form').mage('validation');
 </script>

@@ -64,7 +64,7 @@
     <ul>
         <?php if ($this->getUseSelectAll()):?>
         <li>
-            <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.selectAll()"><?php echo $this->__('Select All') ?></a>
+            <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.selectAll()"><?php echo Mage::helper('Mage_Widget_Helper_Data')->__('Select All') ?></a>
         </li>
         <li>
             <a href="#" onclick="return <?php echo $this->getJsObjectName() ?>.unselectAll()"><?php echo $this->__('Unselect All') ?></a>

@@ -229,7 +229,7 @@ class Mage_Backend_Block_Widget_Grid_Massaction_Extended extends Mage_Backend_Bl
      */
     public function getApplyButtonHtml()
     {
-        return $this->getButtonHtml($this->__('Submit'), $this->getJsObjectName() . ".apply()");
+        return $this->getButtonHtml(Mage::helper('Mage_Adminhtml_Helper_Data')->__('Submit'), $this->getJsObjectName() . ".apply()");
     }
 
     public function getJavaScript()

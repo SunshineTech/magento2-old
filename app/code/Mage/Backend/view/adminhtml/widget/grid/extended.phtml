@@ -96,7 +96,7 @@ $numColumns = sizeof($this->getColumns());
 
                 <?php echo $this->__('of %s pages', $this->getCollection()->getLastPageNumber()) ?>
                 <span class="separator">|</span>
-                <?php echo $this->__('View') ?>
+                <?php echo Mage::helper('Mage_Widget_Helper_Data')->__('View') ?>
                 <select name="<?php echo $this->getVarNameLimit() ?>"
                         onchange="<?php echo $this->getJsObjectName() ?>.loadByElement(this)">
                     <option value="20"<?php if ($this->getCollection()->getPageSize() == 20): ?>
@@ -115,7 +115,7 @@ $numColumns = sizeof($this->getColumns());
                             selected="selected"<?php endif; ?>>200
                     </option>
                 </select>
-                <?php echo $this->__('per page') ?>
+                <?php echo Mage::helper('Mage_Widget_Helper_Data')->__('per page') ?>
                 <span class="separator">|</span>
                 <?php echo $this->__('Total %d records found', $this->getCollection()->getSize()) ?>
                 <span id="<?php echo $this->getHtmlId() ?>-total-count"
